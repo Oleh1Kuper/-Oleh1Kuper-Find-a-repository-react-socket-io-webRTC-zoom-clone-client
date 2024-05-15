@@ -51,6 +51,10 @@
 .new_message_button {
   position: absolute;
   right: 10%;
+  height: 25px;
+  width: 25px;
+  color:#0a91db;
+  cursor: pointer;
 }
 
 .messages_container {
@@ -239,10 +243,13 @@
 }
 
 .video_button_image {
-  height: 80%;
+  height: 25px;
+  width: 25px;
   padding: 10px;
   border-radius: 25px;
   transition: 0.3s;
+  color: #fff;
+  cursor: pointer;
 }
 
 .video_button_image:hover {
@@ -262,6 +269,7 @@
   background: #fc5d5b;
   box-shadow: 0px 3px 30px rgba(252, 93, 91, 0.1);
   transition: 0.2s;
+  cursor: pointer;
 }
 
 .video_button_end:hover {
@@ -285,16 +293,6 @@
 .participant {
   flex-grow: 1;
 }
-
-/* .identity {
-        position: absolute;
-        left: 0px;
-        bottom: 15px;
-        color: white;
-        padding-left: 15px;
-        box-sizing: border-box;
-        z-index: 10;
-      } */
 
 .video {
   display: flex;

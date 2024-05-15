@@ -62,6 +62,7 @@ function JoinRoomContent() {
             placeholder="Enter metting id"
             value={roomId}
             handleChange={handleChangeRoomId}
+            className="join_room_input"
           />
         )}
 
@@ -69,6 +70,7 @@ function JoinRoomContent() {
           placeholder="Enter your name"
           handleChange={handleChangeName}
           value={userName}
+          className="join_room_input"
         />
 
       </div>

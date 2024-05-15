@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { IoIosSend } from 'react-icons/io';
 import { sendDirectMessage } from '../../socket/socket';
+import Input from '../Input/Input';
 
 function DirectMessage() {
   const [message, setMessage] = useState('');
@@ -30,13 +31,12 @@ function DirectMessage() {
 
   return (
     <div className="new_message_container new_message_direct_border">
-      <input
-        className="new_message_input"
+      <Input
         value={message}
-        onChange={handleTextChange}
-        placeholder="Type your message.."
-        type="text"
+        handleChange={handleTextChange}
+        placeholder="Type your message ..."
         onKeyDown={handleKeyPressed}
+        className="new_message_input"
       />
       <IoIosSend className="new_message_button" onClick={sendMessage} />
     </div>

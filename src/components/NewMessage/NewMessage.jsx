@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { IoIosSend } from 'react-icons/io';
 import { sendMessageUsingDataChannel } from '../../utils/webRTCHandler';
+import Input from '../Input/Input';
 
 function NewMessage() {
   const [message, setMessage] = useState('');
@@ -26,13 +27,12 @@ function NewMessage() {
 
   return (
     <div className="new_message_container">
-      <input
-        className="new_message_input"
+      <Input
         value={message}
-        onChange={handleChange}
+        handleChange={handleChange}
         placeholder="Type your message ..."
-        type="text"
         onKeyDown={handleKeyPressed}
+        className="new_message_input"
       />
 
       <IoIosSend className="new_message_button" onClick={sendMessage} />
