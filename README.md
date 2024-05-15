@@ -19,15 +19,15 @@ This project is a Zoom clone built using modern web technologies. It allows user
 ## Technologies Used
 
 - **Frontend:**
-* React
-* Redux
-* React Router DOM
-* Socket.io
-* Simple Peer
-* WebRTC
+  * React
+  * Redux
+  * React Router DOM
+  * Socket.io
+  * Simple Peer
+  * WebRTC
 - **[Backend](https://github.com/Oleh1Kuper/react-socket-io-webRTC-zoom-clone-server):**
-* Node.js
-* Socket.io
+  * Node.js
+  * Socket.io
 
 
 ## Installation
