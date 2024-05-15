@@ -118,6 +118,8 @@ const addStream = (stream, connectedUserSocketId) => {
 };
 
 export const toggleScreenShare = (isShared, screenSharedStream = null) => {
+  const { localStream } = store.getState().room;
+
   if (isShared) {
     switchVideoTracks(localStream);
   } else {
@@ -130,8 +132,8 @@ const switchVideoTracks = (stream) => {
     for (const index in peers[socketId].streams[0].getTracks()) {
       for (const index2 in stream.getTracks()) {
         if (
-          peers[socketId].streams[0].getTracks()[index].kind ===
-          stream.getTracks()[index2].kind
+          peers[socketId].streams[0].getTracks()[index].kind
+          === stream.getTracks()[index2].kind
         ) {
           peers[socketId].replaceTrack(
             peers[socketId].streams[0].getTracks()[index],
