@@ -7,7 +7,6 @@ const initialState = {
   roomId: null,
   username: null,
   isRoomHost: false,
-  isConnectWithAudio: false,
   isLoad: true,
   messages: [],
   activeConversation: null,
@@ -44,9 +43,6 @@ const roomSlice = createSlice({
     },
     setIsRoomHost: (state, action) => {
       state.isRoomHost = action.payload;
-    },
-    setIsConnectWithAudio: (state, action) => {
-      state.isConnectWithAudio = action.payload;
     },
     setRoomId: (state, action) => {
       state.roomId = action.payload;

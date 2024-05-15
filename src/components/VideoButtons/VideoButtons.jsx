@@ -56,7 +56,6 @@ function VideoButtons() {
   };
 
   const leaveRoom = () => {
-    // navigate('/');
     const siteUrl = window.location.origin;
     window.location.href = siteUrl;
   };

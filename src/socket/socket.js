@@ -9,22 +9,18 @@ const { dispatch } = store;
 
 export const connetWithSocket = () => {
   socket.on('connect', () => {
-    console.log('client is connected', socket.id);
     dispatch(actions.setSocketId(socket.id));
   });
 
   socket.on('room-id', (data) => {
-    console.log('room id', data);
     dispatch(actions.setRoomId(data.roomId));
   });
 
   socket.on('room-update', (data) => {
-    console.log('room-update', data);
     dispatch(actions.setParticipants(data.connectedUsers));
   });
 
   socket.on('connection-prepare', (data) => {
-    console.log('connection-prepare', data);
     const { connectedUserSocketId } = data;
     prepareNewPeerConnection(connectedUserSocketId, false);
 
@@ -32,22 +28,18 @@ export const connetWithSocket = () => {
   });
 
   socket.on('connection-signal', (data) => {
-    console.log('connection-signal', data);
     handleSignalData(data);
   });
 
   socket.on('connection-init', (data) => {
-    console.log('connection-init', data);
     prepareNewPeerConnection(data.connectedUserSocketId, true);
   });
 
   socket.on('user-disconnected', (data) => {
-    console.log('user-disconnected', data);
     removePeerConnection(data);
   });
 
   socket.on('direct-message', (data) => {
-    console.log('direct-message', data);
     appendMessageToHistory(data);
   });
 };
